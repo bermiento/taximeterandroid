@@ -23,6 +23,12 @@ public class TimeUnit extends TaxiFareUnit {
 		if(speed<0)throw new IllegalArgumentException("Speed must be greater then 0\t"+speed);
 	    travelingSpeed=speed;
 	}
+	public int getTravelingSpeed(){
+		return travelingSpeed;
+	}
+	public int getTimePerUnit(){
+		return timePerUnit;
+	}
 	public String toString(){
 		return "For every "+timePerUnit+" seconds that you are traveling less then "+travelingSpeed+" MPH" +
 				"\nYou are charged "+super.pricePerUnit+" cents";
