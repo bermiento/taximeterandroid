@@ -18,7 +18,7 @@ public class TaxiMeterSrv extends Service{
 		  super.onCreate();
 
 		  
-		  //if (speed>6 updateDistanceMeter())
+		  //if (speed>6 updateDistanceMeter(speed))
 		  //if (if speed <12 updateTimeMeter(UPDATE_FREQUENCY)//incriment the actuall time
 		  // init the service here
 		//  _startService();
