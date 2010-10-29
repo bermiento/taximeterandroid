@@ -3,7 +3,7 @@ package com.TaxiMeter;
 public class DistanceMeter {
 	private DistanceUnit myRates;
 	private long myPrice;
-	private long feetTraveled;
+	private long metersTraveled;
 	private long initialTime;
 	public DistanceMeter(DistanceUnit myRates){
 		this.myRates=myRates;
@@ -11,20 +11,20 @@ public class DistanceMeter {
 		initialTime=System.nanoTime();
 	}
 	public long getWholeTimeUnits(){
-		return feetTraveled/myRates.getDistance();
+		return metersTraveled/myRates.getDistance();
 	}
 	public long getHalfTimeUnits(){
-		return feetTraveled%myRates.getDistance();
+		return metersTraveled%myRates.getDistance();
 	}
-	public void incrementMeter(//currentSpeed
-			){
+	public void incrementMeter(long distanceTraveled){
 		long newTime=System.nanoTime();
 		//subtract NewTimefrom initialTime and multiply by currentspeed to get the distance
 		//save the NewTime as initialTime
-		long TimeDifference=initialTime-System.nanoTime();
+		//long TimeDifference=initialTime-System.nanoTime();
 		//todo stub
 		//TimeDifference*currentSpeed(convert to feet/hr)
-		initialTime=newTime;
+	//	initialTime=newTime;
+		metersTraveled+=distanceTraveled;
 		
 	}
 	/**
