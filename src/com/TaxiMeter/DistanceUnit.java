@@ -5,14 +5,21 @@ package com.TaxiMeter;
  *
  */
 public class DistanceUnit extends TaxiFareUnit {
-	public static int ONE_FIFTH_MILE=1056;
+	public static int ONE_FIFTH_MILE_IN_FEET=1056;
+	public static int ONE_FIFTH_MILE_IN_METERS=321; //321.87
     public int speed;
 	public int distance;
+	
+	/**
+	 * Constructs a DistanceUnit with one Billing Unit costs price  
+	 * @param price the price in cents
+	 */
 	public DistanceUnit(int price){
 		super(price);
 	}
+	
 	public DistanceUnit(int price,int spe){
-		this(price,spe,DistanceUnit.ONE_FIFTH_MILE);
+		this(price,spe,DistanceUnit.ONE_FIFTH_MILE_IN_METERS);
 	}
 	public DistanceUnit(int price,int spe, int feet){
 		super(price);
