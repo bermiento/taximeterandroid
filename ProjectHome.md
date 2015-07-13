@@ -1,0 +1,1 @@
+The app should count the amount of miles traveled by taxi cab.
